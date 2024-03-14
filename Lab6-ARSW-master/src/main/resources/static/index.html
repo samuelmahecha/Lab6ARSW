@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blueprints</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Blueprints</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" class="form-control" id="author" name="author">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="app.generateListBp(author.value)">Get Blueprints</button>
+                </form>
+                <h2 class="mt-5">Blueprints</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Blueprint Name</th>
+                            <th>Number of Points</th>
+                            <th>Open</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb-body"></tbody>
+                </table>
+                <h2>Total User Points</h2>
+                <h2 id="currentAuthor" class="subtittle" id="sb-author">Blueprints</h2>
+                <p id="puntosText"></p>
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-4">Current Blueprint</h2>
+                <canvas id="canvasBp" class="border border-dark"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <script src="js/apimock.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/apiclient.js"></script>
+</body>
+</html>
